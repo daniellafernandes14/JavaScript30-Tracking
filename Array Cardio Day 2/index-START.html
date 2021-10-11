@@ -33,9 +33,23 @@
       if(currentYear - person.year >= 19) {
         return true;
       }
-    })
+    });
+    console.log(adult);
 
     // Array.prototype.every() // is everyone 19 or older?
+    const allAdult = people.every(function(person) {
+      const currentYear = new Date().getFullYear();
+      if(currentYear - person.year >= 19) {
+        return true;
+      }
+    });
+    console.log(allAdult);
+
+    const allAdults = people.every((person) => {
+      const currentYear = new Date().getFullYear();
+      if (currentYear - person.year >= 19);
+    });
+    console.log(allAdults)
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
